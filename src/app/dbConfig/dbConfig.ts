@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import React from "react";
 
-const connect = async () => {
+export const connect = async () => {
   try {
     mongoose.connect(process.env.MONGO_URL!);
     const connection = mongoose.connection;
@@ -17,5 +17,3 @@ const connect = async () => {
     console.log(error);
   }
 };
-
-export default connect;
